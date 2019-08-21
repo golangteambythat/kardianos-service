@@ -26,13 +26,19 @@ func (p *program) run() {
 		if err != nil {
 			fmt.Println(err)
 		}
-		_, err = a.WriteString("test123")
+		_, err = a.WriteString("test123\n")
+		if i%10 == 0 {
+			a.WriteString("panic\n")
+			a.Close()
+			panic("panic")
+		}
 		if err != nil {
 			fmt.Println(err)
 		}
 		a.Close()
 		fmt.Println(i)
 		time.Sleep(time.Second * 1)
+
 	}
 }
 
