@@ -8,3 +8,8 @@
 - 重启服务 `./demo restart`
 - 删除服务 `./demo remove`
 
+### 注意
+
+需要sudo
+
+Windows需要管理员权限
